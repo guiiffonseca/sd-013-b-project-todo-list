@@ -1,9 +1,5 @@
 const list = document.querySelector('#lista-tarefas');
 
-/*function clearTask() {
-    document.querySelector('#texo-tarefa').value='';
-}*/
-
 function newTask() {
     const task = document.querySelector('#texto-tarefa').value;
     const itemList = document.createElement('li');
@@ -15,3 +11,13 @@ function newTask() {
 const bttn = document.querySelector('#criar-tarefa');
 bttn.addEventListener('click', newTask);
 
+const listItem = document.querySelector('#lista-tarefas');
+listItem.addEventListener('click', backgroundItem);
+
+function backgroundItem(event){
+    const coloredItem= event.target.style.backgroundColor = 'rgb(128,128,128';
+
+    
+
+    
+}
