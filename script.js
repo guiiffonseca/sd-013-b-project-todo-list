@@ -15,9 +15,11 @@ const listItem = document.querySelector('#lista-tarefas');
 listItem.addEventListener('click', backgroundItem);
 
 function backgroundItem(event){
-    const coloredItem= event.target.style.backgroundColor = 'rgb(128,128,128';
-
+    const item = document.querySelector('#lista-tarefas').children;
+    for (let index = 0; index < item.length; index += 1){
+        item[index].style.backgroundColor = '';
+    }
     
-
+    event.target.style.backgroundColor = 'rgb(128,128,128)';
     
 }
