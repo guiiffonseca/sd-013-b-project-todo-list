@@ -2,6 +2,8 @@
 const list = document.querySelector('#lista-tarefas');
 const bttn = document.querySelector('#criar-tarefa');
 const eraser = document.querySelector('#apaga-tudo');
+const completedEraser = document.querySelector ('#remover-finalizados');
+
 bttn.addEventListener('click', newTask);
 function newTask() {
     const task = document.querySelector('#texto-tarefa').value;
@@ -32,13 +34,22 @@ function completedTask (event) {
     }
 }
 
-//Requisito 10
+//Requisito 10 
 eraser.addEventListener('click', clearList);
 
 function clearList (event) {
-   // const item = document.querySelector('#lista-tarefas').children;
     list.parentNode.removeChild(list);
-
-    
 }
+
+//Requisito 11
+completedEraser.addEventListener('click', deleteItem);
+
+function deleteItem (event) {
+    const completedItem = document.querySelectorAll(".completed");
+    for (let item of  completedItem) {
+        item.remove();
+    }
+}
+    
+
 
