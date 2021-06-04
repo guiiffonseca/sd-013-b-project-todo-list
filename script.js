@@ -1,6 +1,7 @@
 //Requisitos 5 e 6
 const list = document.querySelector('#lista-tarefas');
 const bttn = document.querySelector('#criar-tarefa');
+const eraser = document.querySelector('#apaga-tudo');
 bttn.addEventListener('click', newTask);
 function newTask() {
     const task = document.querySelector('#texto-tarefa').value;
@@ -23,7 +24,6 @@ function backgroundItem(event){
 
 //Requisito 9
 list.addEventListener('dblclick', completedTask);
-
 function completedTask (event) {
     if (event.target.classList.contains('completed')) {
         event.target.classList.remove('completed')
@@ -31,3 +31,14 @@ function completedTask (event) {
     event.target.classList.add('completed')
     }
 }
+
+//Requisito 10
+eraser.addEventListener('click', clearList);
+
+function clearList (event) {
+   // const item = document.querySelector('#lista-tarefas').children;
+    list.parentNode.removeChild(list);
+
+    
+}
+
