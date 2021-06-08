@@ -1,0 +1,49 @@
+body {
+  background-color: aliceblue;
+  font-family: monospace;
+}
+
+.selectTask {
+  background-color: gray;
+  width: auto;
+  border-radius: 5px;
+}
+
+#lista-tarefas {
+  list-style-type: none;
+}
+
+.completed {
+  text-decoration: line-through solid;
+}
+
+header {
+  text-align: center;
+  padding: 2%;
+}
+
+#funcionamento {
+  display: inline-flex;
+  width: fit-content;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+#texto-tarefa {
+  display: inline-block;
+  width: 10rem;
+  border-radius: 10px;
+  border-style: dashed;
+}
+
+li {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1.5rem;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+button {
+  font-family: monospace;
+}
